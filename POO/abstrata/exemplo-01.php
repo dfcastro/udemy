@@ -1,14 +1,13 @@
 <?php 
-
-interface Veiculo{
+interface Veiculo
+{
 
 	public function acelerar($velocidade);
 	public function frenar($velocidade);
 	public function trocarMarcha($marca);
 }
 
-
-class Civic implements Veiculo
+abstract class Automovel implements Veiculo
 {
 	public function acelerar($velocidade)
 	{
@@ -21,11 +20,19 @@ class Civic implements Veiculo
 	}
 	public function trocarMarcha($velocidade)
 	{
-		echo "o veiculo trocou a marcha até".$velocidade;
+		echo "o veiculo trocou a marcha ".$velocidade;
 	}
 }
+	class DelRey extends Automovel
+	{
+		public function empurar()
+		{
 
-	$carro = new Civic();
+		}
+	}
 
-	$carro->trocarMarcha(2);
+	$carro = new Automovel();
+
+	$carro->acelerar(200);
+
  ?>
