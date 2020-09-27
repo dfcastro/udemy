@@ -29,13 +29,20 @@ $root = new Usuario();
 /*$aluno = new Usuario("aluno", "@alun0");
 
 $aluno->insert();
-
 echo $aluno;*/
 
-$usuario = new Usuario();
+
+//Alterar um usuario
+/*$usuario = new Usuario();
 $usuario->loadById(12);
 
 $usuario->update('professor','professor');
 
-echo $usuario;
+echo $usuario;*/
+
+
+$usuario =new Usuario();
+$usuario->loadById(12);
+$usuario->delete();
+
  ?>
