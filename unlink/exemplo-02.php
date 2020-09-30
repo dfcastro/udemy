@@ -1,6 +1,6 @@
 <?php 
 
-
+//exclui arquivos e diretorios
 if(!is_dir("images")) mkdir("images");
 foreach (scandir("images") as $item) 
 {
